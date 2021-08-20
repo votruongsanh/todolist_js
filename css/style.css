@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #FEE9F0;
+}
+.card{
+    margin: 50px auto;
+    background-color: #f5f8f9;
+    width: 350px;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    box-shadow: 0 0 6px grey;
+}
+
+.card__header img{
+    width: 100%;
+}
+.card__content {
+    padding: 0 20px;
+}
+.card__add{
+    position: relative;
+    display: flex;
+    margin-top: 5px;
+}
+.card__add input {
+    border: none;
+    height: 40px;
+    text-indent: 18px;
+    width: 100%;
+    background-color: rgba(222, 57, 99, 0.6);
+    color: white;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    outline: none;
+}
+::placeholder{
+    color: white;
+}
+.card__add button {
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgb(222 57 99);
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.card__add i{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #DE3963;
+    background-color: white;
+}
+ul li{
+    list-style: none;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+ul.todo#todo{
+    padding-top: 30px;
+}
+.buttons button{
+    border: none;
+    color: #aaa;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    padding: 5px 0 5px 5px;
+    background-color: white;
+}
+.buttons button.remove:hover{
+    color: red;
+}
+.buttons button.complete:hover{
+    color: #25b99a;
+}
+ul.todo#complete::before{
+    content: "";
+    width: 150px;
+    height: 1px;
+    background-color: #d8e5e0;
+    position: absolute;
+    top: 14px;
+    left: 25%;
+
+}
+ul.todo#complete{
+    padding: 30px 0;
+    position: relative;
+}
+ul.todo#complete span{
+    color: #25b99a;
+}
+ul.todo#complete li .fas{
+    color: #25b99a;
+}
+
+ul.todo#todo:empty:after{
+    content: "You have nothing to-do!";
+    margin-top: 15px;
+}
+ul.todo#complete:empty:after{
+    content: "You have yet to complete any tasks.";
+}
+ul.todo#todo::after, ul.todo#complete::after {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+}
